@@ -1,4 +1,5 @@
 % Project 1
+% Group Members: Nicholas Luis, Shawn Watkins, Matthew Ominsky
 clc; clear;
 
 syms x y mu;
@@ -6,7 +7,7 @@ syms x y mu;
 P1 = sqrt((x+mu)^2 + y^2);
 P2 = sqrt((x-1+mu)^2 + y^2);
 
-U = 0.5*(x^2 + y^2) + (1-mu)/P1 + mu/P2;
+U = 0.5*(x^2 + y^2) + ((1-mu)/P1) + (mu/P2);
 
 % Partial derivatives
 U_x = diff(U, x);
@@ -85,6 +86,6 @@ fprintf("L5 Points: \n");
 for i = 1: 3
     A_subbed = subs(A, [x y mu], [L5_Points(i,1),L5_Points(i,2), Mu(i)] );
     eigenvalues = eig(A_subbed);
-    eigenvaluePairs = [real(eigenvalues), imag(eigenvalues)]; % Separates real and imaginary
+    eigenvaluePairs = [real(eigenvalues), imag(eigenvalues)];
     fprintf('System %d: %f%+fi\t%f%+fi\t%f%+fi\t%f%+fi\n\n', i, eigenvaluePairs');
 end
