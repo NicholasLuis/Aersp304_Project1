@@ -89,3 +89,12 @@ for i = 1: 3
     eigenvaluePairs = [real(eigenvalues), imag(eigenvalues)];
     fprintf('System %d: %f%+fi\t%f%+fi\t%f%+fi\t%f%+fi\n\n', i, eigenvaluePairs');
 end
+
+
+
+%% Part D
+close all;
+
+% Initializing variables
+load('EM_L2-304P1.mat');
+
